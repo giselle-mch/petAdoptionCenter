@@ -104,7 +104,33 @@ body{
 
 /* end of header section */
 
+/* start of about section */
 
+#aboutSection{
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.aboutContainer{
+    max-width: 800px;
+    margin: auto;
+}
+
+#aboutSection h2{
+    color: #7B61FF;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#aboutSection p{
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* end of about section */
 
 
 
