@@ -1,0 +1,316 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #F8F8FC;
+}
+
+
+/* start of header section */
+
+#headerSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Navigation Bar */
+
+#navigation{
+    background: #7B61FF;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+    text-align: right;
+    font-size: 20px;
+    justify-content: right;
+    display: flex;
+    padding: 20px;
+}
+
+#navigation a{
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: all 0.3s ease;
+}
+
+#navigation a:hover{
+    color: #FF8FA3;
+    font-size: 25px;
+}
+
+
+/* Header Content */
+
+#headerContent {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+}
+
+#headerContent h1 {
+    color: #7B61FF;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#headerContent p {
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#btnAdopt {
+    background: #FF8FA3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btnAdopt:hover {
+    background: #CDB8FF;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+
+/* header image */
+
+#headerImage {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 30px;
+}
+
+#headerImage img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#headerImage img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* end of header section */
+
+
+/* start of about section */
+
+#aboutSection{
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.aboutContainer{
+    max-width: 800px;
+    margin: auto;
+}
+
+#aboutSection h2{
+    color: #7B61FF;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#aboutSection p{
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* end of about section */
+
+
+/* start of services section */
+
+#servicesSection{
+    padding: 60px 20px;
+    background: #F8F8FC;
+    text-align: center;
+}
+
+#servicesSection h2{
+    color: #7B61FF;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.servicesContainer{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.serviceCard{
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover{
+    transform: translateY(-10px);
+}
+
+.serviceCard img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.serviceCard h3{
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.serviceCard p{
+    color: #333333;
+    font-size: 16px;
+}
+
+/* end of services section */
+
+
+/* start of portfolio section */
+
+#portafolioSection{
+    padding: 60px 20px;
+    background: white;
+    text-align: center;
+}
+
+.portfolioContainer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#portafolioSection h2{
+    color: #7B61FF;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.portfolioText{
+    color: #333333;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.portfolioGrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.petCard{
+    background: #F8F8FC;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.petCard:hover{
+    transform: translateY(-10px);
+}
+
+.petCard img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.petCard h3{
+    margin: 15px 0 5px;
+    color: #333333;
+}
+
+.petCard p{
+    font-size: 15px;
+    color: #555;
+    padding: 0 10px;
+}
+
+.petCard button{
+    background: #FF8FA3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.petCard button:hover{
+    background: #CDB8FF;
+}
+
+/* end of portfolio section */
+
+
+/* responsive */
+
+@media (max-width: 900px){
+
+    #headerSection{
+        flex-direction: column;
+    }
+
+    #headerContent{
+        width: 100%;
+    }
+
+    #headerImage{
+        width: 100%;
+    }
+
+    .portfolioGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .portfolioGrid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/*
+
+| Uso             | Color          | Código    |
+| --------------- | -------------- | --------- |
+| Color principal | Morado         | #7B61FF |
+| Secundario      | Lavanda claro  | #CDB8FF |
+| Acento          | Coral suave    | #FF8FA3 |
+| Fondo           | Gris muy claro | #F8F8FC |
+| Texto           | Gris oscuro    | #333333 |
+
+*/
