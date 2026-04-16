@@ -261,3 +261,107 @@ border-top:1px solid rgba(255,255,255,.3);
 padding-top:20px;
 font-size:14px;
 }
+
+/* FONDO OSCURO */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+}
+
+/* CAJA LOGIN */
+.modalContent {
+    background: #FFFFFF;
+    width: 320px;
+    margin: 8% auto;
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    animation: fadeIn .3s ease;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* TITULO */
+.modalContent h2 {
+    color: #7B61FF;
+    margin-bottom: 15px;
+}
+
+/* BOTÓN CERRAR */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close:hover {
+    color: #FF8FA3;
+}
+
+/* INPUTS */
+.modalContent input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: .2s;
+}
+
+.modalContent input:focus {
+    border-color: #7B61FF;
+    box-shadow: 0 0 5px rgba(123,97,255,.3);
+}
+
+/* BOTÓN LOGIN */
+.modalContent button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #FF8FA3;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.modalContent button:hover {
+    background: #7B61FF;
+}
+
+/* TEXTO SWITCH */
+.switchText {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.switchText span {
+    color: #7B61FF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.switchText span:hover {
+    color: #FF8FA3;
+}
+
+/* ASEGURA QUE LA X FUNCIONE BIEN */
+.modalContent {
+    position: relative;
+}

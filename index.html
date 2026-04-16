@@ -11,6 +11,7 @@
 <body>
 
     <nav id="navigation">
+        <a href="#" onclick="abrirLogin()">Login</a>
         <a href="#headerSection">Home</a>
         <a href="#aboutSection">About</a>
         <a href="#servicesSection">Services</a>
@@ -23,7 +24,7 @@
         <div id="headerContent">
             <h1>Welcome to the Pet Adoption Center</h1>
             <p>Your new best friend is waiting for you!</p>
-            <button id="btnAdopt">Adopt Now</button>
+            <button onclick="adoptar()">Adopt Me</button>
         </div>
 
         <div id="headerImage">
@@ -98,28 +99,28 @@
                     <img src="./assets/dog1.jpg">
                     <h3>Buddy</h3>
                     <p>Friendly and playful dog looking for a caring family.</p>
-                    <button>Adopt Me</button>
+                    <button onclick="adoptar()">Adopt Me</button>
                 </div>
 
                 <div class="petCard">
                     <img src="./assets/cat1.jpg">
                     <h3>Luna</h3>
                     <p>Sweet and calm cat who loves to cuddle.</p>
-                    <button>Adopt Me</button>
+                    <button onclick="adoptar()">Adopt Me</button>
                 </div>
 
                 <div class="petCard">
                     <img src="./assets/dog2.jpg">
                     <h3>Max</h3>
                     <p>Energetic dog perfect for outdoor adventures.</p>
-                    <button>Adopt Me</button>
+                    <button onclick="adoptar()">Adopt Me</button>
                 </div>
 
                 <div class="petCard">
                     <img src="./assets/cat2.jpg">
                     <h3>Milo</h3>
                     <p>Curious and lovable cat ready to meet you.</p>
-                    <button>Adopt Me</button>
+                    <button onclick="adoptar()">Adopt Me</button>
                 </div>
 
             </div>
@@ -213,6 +214,49 @@
         </footer>
     </section>
 
+<div id="loginModal" class="modal">
+
+    <div class="modalContent">
+        
+        <!-- BOTÓN CERRAR -->
+        <span class="close" onclick="cerrarLogin()">&times;</span>
+
+        <!-- LOGIN -->
+        <div id="loginForm">
+            <h2>Welcome Back!!</h2>
+
+            <input type="text" id="loginUser" placeholder="Usuario">
+            <input type="password" id="loginPass" placeholder="Contraseña">
+
+            <button onclick="login()">Iniciar Sesión</button>
+
+            <p class="switchText">
+                ¿No tienes cuenta? 
+                <span onclick="mostrarRegister()">Regístrate</span>
+            </p>
+        </div>
+
+        <!-- REGISTER -->
+        <div id="registerForm" style="display:none;">
+            <h2>Crear Cuenta!!</h2>
+
+            <input type="text" id="regUser" placeholder="Usuario">
+            <input type="email" id="regEmail" placeholder="Email">
+            <input type="password" id="regPass" placeholder="Contraseña">
+
+            <button onclick="register()">Registrarse</button>
+
+            <p class="switchText">
+                ¿Ya tienes cuenta? 
+                <span onclick="mostrarLoginForm()">Inicia sesión</span>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="main.js"></script>
 </body>
 
 </html>
