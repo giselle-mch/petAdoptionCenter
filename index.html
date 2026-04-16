@@ -15,7 +15,14 @@
         <a href="#aboutSection">About</a>
         <a href="#servicesSection">Services</a>
         <a href="#portafolioSection">Portfolio</a>
+        <a href="#weatherSection">Weather</a>
         <a href="#contactSection">Contact</a>
+
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+
+        <span id="userInfo">No session</span>
+        <button id="logoutBtn" type="button">Logout</button>
     </nav>
 
     <section id="headerSection">
@@ -60,19 +67,19 @@
         <div class="servicesContainer">
 
             <div class="serviceCard">
-                <img src="./assets/adoption.jpeg" alt="">
+                <img src="./assets/adoption.jpeg" alt="Adoption service">
                 <h3>Pet Adoption</h3>
                 <p>Find the perfect companion and give a pet a loving home.</p>
             </div>
 
             <div class="serviceCard">
-                <img src="./assets/care.jpeg" alt="">
+                <img src="./assets/care.jpeg" alt="Pet care service">
                 <h3>Pet Care</h3>
                 <p>We provide medical care and daily attention for rescued pets.</p>
             </div>
 
             <div class="serviceCard">
-                <img src="./assets/support.jpg" alt="">
+                <img src="./assets/support.jpg" alt="Support service">
                 <h3>Adoption Support</h3>
                 <p>Guidance and support to help families during the adoption process.</p>
             </div>
@@ -80,7 +87,6 @@
         </div>
 
     </section>
-
 
     <section id="portafolioSection">
 
@@ -92,42 +98,31 @@
                 Meet some of the adorable pets waiting for a loving home.
             </p>
 
-            <div class="portfolioGrid">
+            <h3 class="apiSectionTitle">Dogs Available for Adoption</h3>
+            <div class="portfolioGrid" id="dogsContainer">
+                <p>Loading dogs...</p>
+            </div>
 
-                <div class="petCard">
-                    <img src="./assets/dog1.jpg">
-                    <h3>Buddy</h3>
-                    <p>Friendly and playful dog looking for a caring family.</p>
-                    <button>Adopt Me</button>
-                </div>
-
-                <div class="petCard">
-                    <img src="./assets/cat1.jpg">
-                    <h3>Luna</h3>
-                    <p>Sweet and calm cat who loves to cuddle.</p>
-                    <button>Adopt Me</button>
-                </div>
-
-                <div class="petCard">
-                    <img src="./assets/dog2.jpg">
-                    <h3>Max</h3>
-                    <p>Energetic dog perfect for outdoor adventures.</p>
-                    <button>Adopt Me</button>
-                </div>
-
-                <div class="petCard">
-                    <img src="./assets/cat2.jpg">
-                    <h3>Milo</h3>
-                    <p>Curious and lovable cat ready to meet you.</p>
-                    <button>Adopt Me</button>
-                </div>
-
+            <h3 class="apiSectionTitle">Cats Available for Adoption</h3>
+            <div class="portfolioGrid" id="catsContainer">
+                <p>Loading cats...</p>
             </div>
 
         </div>
 
     </section>
 
+    <section id="weatherSection">
+
+        <div class="weatherSectionContainer">
+            <h2>Weather in Our Adoption Center</h2>
+
+            <div id="weatherContainer">
+                <p>Loading weather...</p>
+            </div>
+        </div>
+
+    </section>
 
     <section id="contactSection">
 
@@ -152,15 +147,10 @@
                 </div>
 
                 <form class="contactForm">
-
                     <input type="text" placeholder="Your Name">
-
                     <input type="email" placeholder="Your Email">
-
                     <textarea rows="5" placeholder="Your Message"></textarea>
-
                     <button type="submit">Send Message</button>
-
                 </form>
 
             </div>
@@ -170,7 +160,7 @@
     </section>
 
     <section id="footerSection">
-        <footer id="footerSection">
+        <footer>
 
             <div class="footerContainer">
 
@@ -187,6 +177,7 @@
                     <a href="#aboutSection">About</a>
                     <a href="#servicesSection">Services</a>
                     <a href="#portafolioSection">Portfolio</a>
+                    <a href="#weatherSection">Weather</a>
                     <a href="#contactSection">Contact</a>
                 </div>
 
@@ -212,6 +203,11 @@
 
         </footer>
     </section>
+
+    <script type="module" src="js/session.js"></script>
+    <script src="js/dogs.js"></script>
+    <script src="js/cats.js"></script>
+    <script src="js/weather.js"></script>
 
 </body>
 
