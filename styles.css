@@ -9,23 +9,51 @@ background:#F8F8FC;
 
 #navigation{
 background:#7B61FF;
-height:60px;
+min-height:60px;
 display:flex;
 align-items:center;
-justify-content:right;
-padding-right:40px;
+justify-content:flex-end;
+padding:10px 30px;
+flex-wrap:wrap;
 }
 
 #navigation a{
 color:white;
-margin-left:25px;
+margin-left:20px;
 text-decoration:none;
-font-size:18px;
+font-size:16px;
 transition:.3s;
 }
 
 #navigation a:hover{
 color:#FF8FA3;
+}
+
+
+/* USER INFO */
+
+#userInfo{
+color:white;
+margin-left:20px;
+font-size:15px;
+font-weight:bold;
+}
+
+#logoutBtn{
+margin-left:10px;
+background:#FF8FA3;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+color:white;
+font-size:14px;
+cursor:pointer;
+display:none;
+transition:.3s;
+}
+
+#logoutBtn:hover{
+background:#CDB8FF;
 }
 
 
@@ -36,6 +64,7 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:60px;
+gap:40px;
 }
 
 #headerContent{
@@ -125,6 +154,10 @@ object-fit:cover;
 border-radius:8px;
 }
 
+.serviceCard h3{
+color:#7B61FF;
+}
+
 
 /* PORTFOLIO */
 
@@ -134,11 +167,30 @@ text-align:center;
 background:white;
 }
 
+.portfolioContainer{
+max-width:1200px;
+margin:auto;
+}
+
+.portfolioText{
+font-size:18px;
+color:#333;
+margin-bottom:20px;
+}
+
+.apiSectionTitle{
+color:#7B61FF;
+font-size:28px;
+margin-top:40px;
+margin-bottom:10px;
+text-align:center;
+}
+
 .portfolioGrid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:25px;
-margin-top:40px;
+margin-top:30px;
 }
 
 .petCard{
@@ -147,6 +199,7 @@ border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,.1);
 padding-bottom:20px;
 transition:.3s;
+overflow:hidden;
 }
 
 .petCard:hover{
@@ -158,6 +211,19 @@ width:100%;
 height:200px;
 object-fit:cover;
 border-radius:10px 10px 0 0;
+display:block;
+}
+
+.petCard h3{
+margin:15px 15px 10px 15px;
+color:#7B61FF;
+font-size:22px;
+}
+
+.petCard p{
+margin:0 15px 12px 15px;
+color:#333;
+line-height:1.5;
 }
 
 .petCard button{
@@ -167,6 +233,57 @@ padding:10px 20px;
 color:white;
 border-radius:5px;
 cursor:pointer;
+margin-top:5px;
+}
+
+.petCard button:hover{
+background:#CDB8FF;
+}
+
+
+/* WEATHER */
+
+#weatherSection{
+padding:60px;
+text-align:center;
+background:#F8F8FC;
+}
+
+.weatherSectionContainer{
+max-width:1200px;
+margin:auto;
+}
+
+#weatherSection h2{
+color:#7B61FF;
+margin-bottom:25px;
+font-size:32px;
+}
+
+#weatherContainer{
+display:flex;
+justify-content:center;
+}
+
+.weatherCard{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+display:inline-block;
+min-width:280px;
+}
+
+.weatherCard h3{
+margin-top:0;
+color:#7B61FF;
+font-size:28px;
+}
+
+.weatherCard p{
+font-size:18px;
+color:#333;
+margin:10px 0;
 }
 
 
@@ -175,6 +292,16 @@ cursor:pointer;
 #contactSection{
 padding:60px;
 text-align:center;
+}
+
+.contactContainer{
+max-width:1200px;
+margin:auto;
+}
+
+.contactText{
+font-size:18px;
+color:#333;
 }
 
 .contactContent{
@@ -200,6 +327,7 @@ background:white;
 padding:30px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,.1);
+min-width:320px;
 }
 
 .contactForm input,
@@ -207,6 +335,8 @@ box-shadow:0 4px 10px rgba(0,0,0,.1);
 padding:12px;
 border:1px solid #ccc;
 border-radius:6px;
+font-size:16px;
+font-family:Arial;
 }
 
 .contactForm button{
@@ -217,6 +347,11 @@ color:white;
 border-radius:6px;
 cursor:pointer;
 }
+
+.contactForm button:hover{
+background:#CDB8FF;
+}
+
 
 /* FOOTER */
 
@@ -260,4 +395,201 @@ text-align:center;
 border-top:1px solid rgba(255,255,255,.3);
 padding-top:20px;
 font-size:14px;
+}
+
+
+/* AUTH PAGES */
+
+#authSection{
+padding:60px;
+min-height:calc(100vh - 60px);
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.authWrapper{
+width:100%;
+max-width:1100px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.authText{
+flex:1;
+min-width:280px;
+}
+
+.authText h1{
+color:#7B61FF;
+font-size:38px;
+margin-bottom:15px;
+}
+
+.authText p{
+font-size:18px;
+color:#333;
+line-height:1.6;
+max-width:500px;
+}
+
+.authCard{
+flex:1;
+min-width:320px;
+max-width:420px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.authCard h2{
+color:#7B61FF;
+text-align:center;
+margin-bottom:20px;
+}
+
+.authForm{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.authForm input{
+padding:12px;
+border:1px solid #ccc;
+border-radius:6px;
+font-size:16px;
+outline:none;
+}
+
+.authForm input:focus{
+border:1px solid #7B61FF;
+}
+
+.authForm button{
+background:#FF8FA3;
+border:none;
+padding:12px;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+transition:.3s;
+}
+
+.authForm button:hover{
+background:#CDB8FF;
+}
+
+#message{
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+min-height:20px;
+}
+
+.authLinkText{
+text-align:center;
+margin-top:18px;
+color:#333;
+}
+
+.authLinkText a{
+color:#7B61FF;
+text-decoration:none;
+font-weight:bold;
+}
+
+.authLinkText a:hover{
+color:#FF8FA3;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px){
+
+#headerSection{
+flex-direction:column;
+padding:40px 20px;
+}
+
+#headerContent,
+#headerImage{
+width:100%;
+}
+
+.portfolioGrid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.authWrapper{
+flex-direction:column;
+text-align:center;
+}
+
+.authText p{
+margin:auto;
+}
+
+.footerContainer{
+justify-content:center;
+}
+}
+
+@media (max-width: 600px){
+
+#navigation{
+justify-content:center;
+padding:15px;
+}
+
+#navigation a{
+margin:8px 10px;
+font-size:15px;
+}
+
+#userInfo{
+margin-top:8px;
+margin-left:10px;
+}
+
+#logoutBtn{
+margin-top:8px;
+}
+
+#headerContent h1,
+.authText h1{
+font-size:30px;
+}
+
+#aboutSection,
+#servicesSection,
+#portafolioSection,
+#weatherSection,
+#contactSection,
+#authSection{
+padding:40px 20px;
+}
+
+.portfolioGrid{
+grid-template-columns:1fr;
+}
+
+.authCard{
+min-width:unset;
+width:100%;
+}
+
+.footerContainer{
+flex-direction:column;
+}
+
+.footerColumn{
+width:100%;
+}
 }
